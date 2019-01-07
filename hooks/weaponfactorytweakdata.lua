@@ -1,13 +1,13 @@
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
 --                                                                                      --
---                          ||       |||||||   	   ||||||               				--
---                         ||||      ||    ||     ||    ||                				--
---                        ||  ||     ||   ||      ||    ||                             	--
---                       ||||||||    ||||||        |||||||                            	--
---                      ||      ||   ||   ||            ||                              --
---                     ||        ||  ||    ||           ||       					    --
---                    ||          || ||     ||     ||||||  								--
+--                          ||       |||||||       |||   ||||||||           			--
+--                         ||||      ||    ||     ||||         ||          				--
+--                        ||  ||     ||   ||     || ||        ||                        --
+--                       ||||||||    ||||||     ||||||||     ||                         --
+--                      ||      ||   ||   ||        ||      ||                          --
+--                     ||        ||  ||    ||       ||     ||   					    --
+--                    ||          || ||     ||      ||    ||							--
 --                                                                                      --
 ------------------------------------------------------------------------------------------
 --																						--
@@ -25,9 +25,9 @@
 ------------------------------------------------------------------------------------------
 
 
----------------------------------------
-----<A><R><9> -Functions- <A><R><9>----
----------------------------------------
+---------------------------------------------
+----<A><R><4><7> -Functions- <A><R><4><7>----
+---------------------------------------------
 
 --- Forbid Setup ---
 function WeaponFactoryTweakData:arpack_setup_forbid( mod_one, mod_two )
@@ -103,21 +103,21 @@ function WeaponFactoryTweakData:ar15_write_error( func, cause, error_id, value  
 		-- fti = failed to index
 		if cause == "fti" and value then
 			if error_id == "part" then
-				log("AR9_ERROR: (" .. func .. ")Attempt to index Part ID: '" .. value .. "' (a nil value)")
+				log("AR47_ERROR: (" .. func .. ")Attempt to index Part ID: '" .. value .. "' (a nil value)")
 			elseif error_id == "wpn" then
-				log("AR9_ERROR: (" .. func .. ")Attempt to index Weapon ID: '" .. value .. "' (a nil value)")
+				log("AR47_ERROR: (" .. func .. ")Attempt to index Weapon ID: '" .. value .. "' (a nil value)")
 			elseif error_id == "mod_type" then
-				log("AR9_ERROR: (" .. func .. ")Attempt to index mod_type: '" .. value .. "' (a nil value)")
+				log("AR47_ERROR: (" .. func .. ")Attempt to index mod_type: '" .. value .. "' (a nil value)")
 			end
 		end
 	end
 end 
 
-Hooks:PostHook( WeaponFactoryTweakData, "init", "AR9ModInit", function(self)
+Hooks:PostHook( WeaponFactoryTweakData, "init", "AR47ModInit", function(self)
 
-------------------------------------
-----<A><R><9> -Arrays- <A><R><9>----
-------------------------------------
+------------------------------------------
+----<A><R><4><7> -Arrays- <A><R><4><7>----
+------------------------------------------
 
 --- Stocks ---
 
@@ -134,7 +134,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "AR9ModInit", function(self)
 
 
 --- Barrel Extensions --
-local all_ar9ext = {
+local all_ar47ext = {
 	"wpn_fps_upg_ns_ass_smg_large",
 	"wpn_fps_upg_ns_ass_smg_medium",
 	"wpn_fps_upg_ns_ass_smg_small",
@@ -147,11 +147,11 @@ local all_ar9ext = {
 	"wpn_fps_upg_ass_ns_surefire",
 	"wpn_fps_upg_ass_ns_battle",
 	"wpn_fps_ass_stoy_762_md_dummy",
-	"wpn_fps_ass_stoy_762_md_r0635"
+	"wpn_fps_ass_stoy_762_md_bca47"
 }
 
 --- Gadgets (Flashlights/Lasers) ---
-local all_ar9fl = {
+local all_ar47fl = {
 	"wpn_fps_upg_fl_ass_smg_sho_peqbox",
 	"wpn_fps_upg_fl_ass_smg_sho_surefire",
 	"wpn_fps_upg_fl_ass_peq15",
@@ -161,7 +161,7 @@ local all_ar9fl = {
 }
 
 --- Sights ---
-local all_ar9sight = {
+local all_ar47sight = {
 	"wpn_fps_upg_o_specter",
 	"wpn_fps_upg_o_aimpoint",
 	"wpn_fps_upg_o_aimpoint_2",
@@ -210,13 +210,13 @@ if self.wpn_fps_ass_stoy_556 then
 		"wpn_fps_ass_stoy_556_hg_m607",
 		"wpn_fps_ass_stoy_556_hg_m4a1"
 	}
-	self.parts.wpn_fps_ass_stoy_556_hg_m16a2.override.wpn_fps_ass_stoy_762_gb_r0635 = {a_obj="a_gb_ar15"}
-	self.parts.wpn_fps_ass_stoy_556_hg_ar15.override.wpn_fps_ass_stoy_762_gb_r0635 = {a_obj="a_gb_ar15"}
+	self.parts.wpn_fps_ass_stoy_556_hg_m16a2.override.wpn_fps_ass_stoy_762_gb_bca47 = {a_obj="a_gb_ar15"}
+	self.parts.wpn_fps_ass_stoy_556_hg_ar15.override.wpn_fps_ass_stoy_762_gb_bca47 = {a_obj="a_gb_ar15"}
 	for id, part_id in pairs(all_ar15pts) do
 		table.insert(self.wpn_fps_ass_stoy_762.uses_parts, part_id)
 	end
-	table.insert(self.parts.wpn_fps_ass_stoy_762_ba_r0635.forbids, "wpn_fps_ass_stoy_556_hg_m16a2")
-	table.insert(self.parts.wpn_fps_ass_stoy_762_ba_r0635.forbids, "wpn_fps_ass_stoy_556_hg_ar15")
+	table.insert(self.parts.wpn_fps_ass_stoy_762_ba_bca47.forbids, "wpn_fps_ass_stoy_556_hg_m16a2")
+	table.insert(self.parts.wpn_fps_ass_stoy_762_ba_bca47.forbids, "wpn_fps_ass_stoy_556_hg_ar15")
 	
 	self.wpn_fps_ass_stoy_762.override.wpn_fps_ass_stoy_556_hg_ar15  = {stats = {spread = 0,recoil = 2,concealment = -2}}
 	self.wpn_fps_ass_stoy_762.override.wpn_fps_ass_stoy_556_st_ar15  = {stats = {spread = 0,recoil = 1,concealment = -1}}
@@ -227,11 +227,11 @@ if self.wpn_fps_ass_stoy_556 then
 	self.wpn_fps_ass_stoy_762.override.wpn_fps_ass_stoy_556_hg_m4a1  = {stats = {spread = 1,recoil = -1,concealment = 0}}
 	self.wpn_fps_ass_stoy_762.override.wpn_fps_ass_stoy_556_st_m4a1  = {stats = {spread = -1,recoil = 1,concealment = 0}}
 end
------------------------------------
-----<A><R><9> -CAFCW- <A><R><9>----
------------------------------------
+-----------------------------------------
+----<A><R><4><7> -CAFCW- <A><R><4><7>----
+-----------------------------------------
 if BeardLib.Utils:FindMod("Custom attachments for custom weapons") then
-	local cafcwsights_ar9 = {
+	local cafcwsights_ar47 = {
 		"wpn_fps_upg_o_acog_rmr",
 		"wpn_fps_upg_o_gitsch",
 		"wpn_fps_upg_o_aog",
@@ -263,7 +263,7 @@ if BeardLib.Utils:FindMod("Custom attachments for custom weapons") then
 		"wpn_fps_upg_o_pka",
 		"wpn_fps_upg_o_anpas13d"
 	}
-	local cafcwgadgets_ar9 = { 
+	local cafcwgadgets_ar47 = { 
 		"wpn_fps_upg_fl_ass_spotter",
 		"wpn_fps_upg_fl_wml",
 		"wpn_fps_upg_fl_anpeq2",
@@ -271,14 +271,14 @@ if BeardLib.Utils:FindMod("Custom attachments for custom weapons") then
 		"wpn_fps_upg_fl_m600p",
 		"wpn_fps_upg_fl_utg"
 	}
-	for id, part_id in pairs(cafcwsights_ar9) do
+	for id, part_id in pairs(cafcwsights_ar47) do
 		if self.parts[part_id] then
-			table.insert(all_ar9sight, part_id)
+			table.insert(all_ar47sight, part_id)
 		end
 	end
-	for id, part_id in pairs(cafcwgadgets_ar9) do
+	for id, part_id in pairs(cafcwgadgets_ar47) do
 		if self.parts[part_id] then
-			table.insert(all_ar9fl, part_id)
+			table.insert(all_ar47fl, part_id)
 		end
 	end
 end
@@ -291,28 +291,28 @@ if BeardLib.Utils:FindMod("gsup") then
 	}
 	for id, part_id in pairs(AR15SneakySuppressorPack) do
 		table.insert(self.wpn_fps_ass_stoy_762.uses_parts, part_id)
-		table.insert(all_ar9ext, part_id)
+		table.insert(all_ar47ext, part_id)
 	end
 end
 
 if BeardLib.Utils:FindMod("Tromix Barrel-Ext") then
 	table.insert(self.wpn_fps_ass_stoy_762.uses_parts, "wpn_fps_upg_ns_ass_smg_tromix")	
-	table.insert(all_ar9ext, "wpn_fps_upg_ns_ass_smg_tromix")
+	table.insert(all_ar47ext, "wpn_fps_upg_ns_ass_smg_tromix")
 end
 
 if BeardLib.Utils:FindMod("M82 Muzzle Brake") then
-	table.insert(all_ar9ext, "wpn_fps_upg_ns_m82")
-	table.insert(all_ar9ext, "wpn_fps_upg_ns_aw50")
+	table.insert(all_ar47ext, "wpn_fps_upg_ns_m82")
+	table.insert(all_ar47ext, "wpn_fps_upg_ns_aw50")
 end
 
 if BeardLib.Utils:FindMod("Thermal Scope") then
-	table.insert(all_ar9sight, "wpn_fps_upg_o_thersig")
+	table.insert(all_ar47sight, "wpn_fps_upg_o_thersig")
 	table.insert(nonacog_arsight, "wpn_fps_upg_o_thersig")
 end
 
---------------------------------------
-----<A><R><9> -Override- <A><R><9>----
---------------------------------------
+--------------------------------------------
+----<A><R><4><7> -Override- <A><R><4><7>----
+--------------------------------------------
 
 --- Barrels ---
 
@@ -330,29 +330,24 @@ end
 --	self.parts.wpn_fps_ass_stoy_556_hg_m4a1.override[gb_id] = {a_obj="a_gb_car15"}
 --end
 --MD override--
-for id, ext_id in pairs(all_ar9ext) do
-	if ext_id ~= "wpn_fps_ass_stoy_762_md_dummy" then
-		self.parts.wpn_fps_ass_stoy_762_ba_ar6951.override[ext_id] = {a_obj="a_ns_ar6951"}
-	end
-end
 --- Lowers/Carry Handle ---
 --O override--
 
-----------------------------------
-----<A><R><9> -Adds- <A><R><9>----
-----------------------------------
-for i, o_id in pairs(all_ar9sight) do
+----------------------------------------
+----<A><R><4><7> -Adds- <A><R><4><7>----
+----------------------------------------
+for i, o_id in pairs(all_ar47sight) do
 	self.wpn_fps_ass_stoy_762.adds[o_id] = {"wpn_fps_ass_stoy_762_sm_base","wpn_fps_ass_stoy_762_sm_knob"}
 end
--------------------------------------
-----<A><R><9> -Forbids- <A><R><9>----
--------------------------------------
-for i, fl_id in pairs(all_ar9fl) do
-	table.insert(self.parts.wpn_fps_ass_stoy_762_hg_r0635.forbids, fl_id)
+-------------------------------------------
+----<A><R><4><7> -Forbids- <A><R><4><7>----
+-------------------------------------------
+for i, fl_id in pairs(all_ar47fl) do
+	table.insert(self.parts.wpn_fps_ass_stoy_762_hg_bca47.forbids, fl_id)
 end
-------------------------------------
-----<A><R><9> -Stance- <A><R><9>----
-------------------------------------
+------------------------------------------
+----<A><R><4><7> -Stance- <A><R><4><7>----
+------------------------------------------
 
 --- Vanilla sights ---
 -- non-acoc, default sights --
@@ -365,19 +360,19 @@ self.parts.wpn_fps_upg_o_45rds.stance_mod.wpn_fps_ass_stoy_762 		   	  = deep_cl
 self.parts.wpn_fps_upg_o_xpsg33_magnifier.stance_mod.wpn_fps_ass_stoy_762 = deep_clone(self.parts.wpn_fps_upg_o_xpsg33_magnifier.stance_mod.wpn_fps_ass_flint)
 self.parts.wpn_fps_upg_o_45rds_v2.stance_mod.wpn_fps_ass_stoy_762 		  = deep_clone(self.parts.wpn_fps_upg_o_45rds_v2.stance_mod.wpn_fps_ass_flint)
 
-------------------------------------
-----<A><R><9> -Tweaks- <A><R><9>----
-------------------------------------
+------------------------------------------
+----<A><R><4><7> -Tweaks- <A><R><4><7>----
+------------------------------------------
 
 --- Barrel Extensions ---
 self.parts.wpn_fps_ass_stoy_762_md_dummy.pcs = nil
 
-------------------------------------
-----<A><R><9> -CLONES- <A><R><9>----
-------------------------------------
+------------------------------------------
+----<A><R><4><7> -CLONES- <A><R><4><7>----
+------------------------------------------
 
----------------------------------
-----<A><R><9> -WIP- <A><R><9>----
----------------------------------
+---------------------------------------
+----<A><R><4><7> -WIP- <A><R><4><7>----
+---------------------------------------
 
 end )

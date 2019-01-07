@@ -1,5 +1,5 @@
 {
-	"bm_w_stoy_762" : "BCA-15",
+	"bm_w_stoy_762" : "BCA-47",
 	"bm_w_stoy_762_desc" : "Description.",
 	
 	"menu_l_global_value_stoy_762" : "This is an AR Pack Weapon!",
@@ -37,19 +37,17 @@
 	"bm_menu_strap"        		  	   : "Strap",
 	"bm_menu_strap_plural" 	   	  	   : "Straps",
 	
-	"bm_wp_wpn_fps_ass_stoy_762_lr_bca15"    : "AR-15 Lower Receiver",
-	"bm_wp_wpn_fps_ass_stoy_762_ur_bca15"    : "AR-15 Upper Receiver",
-	"bm_wp_wpn_fps_ass_stoy_762_ba_bca15"    : "AR-15 Barrel",
-	"bm_wp_wpn_fps_ass_stoy_762_md_bca15"    : "AR-15 Flash Hider",
-	"bm_wp_wpn_fps_ass_stoy_762_gb_bca15"    : "AR-15 Gas Block",
-	"bm_wp_wpn_fps_ass_stoy_762_bo_bca15"    : "AR-15 Bolt",
-	"bm_wp_wpn_fps_ass_stoy_762_hg_bca15"    : "AR-15 Handguard",
-	"bm_wp_wpn_fps_ass_stoy_762_pg_bca15"    : "AR-15 Grip",
-	"bm_wp_wpn_fps_ass_stoy_762_st_bca15"    : "AR-15 Stock",
+	"bm_wp_wpn_fps_ass_stoy_762_lr_bca47"    : "AR-47 Lower Receiver",
+	"bm_wp_wpn_fps_ass_stoy_762_ur_bca47"    : "AR-47 Upper Receiver",
+	"bm_wp_wpn_fps_ass_stoy_762_ba_bca47"    : "AR-47 Barrel",
+	"bm_wp_wpn_fps_ass_stoy_762_md_bca47"    : "AR-47 Flash Hider",
+	"bm_wp_wpn_fps_ass_stoy_762_gb_bca47"    : "AR-47 Gas Block",
+	"bm_wp_wpn_fps_ass_stoy_762_bo_bca47"    : "AR-47 Bolt",
+	"bm_wp_wpn_fps_ass_stoy_762_hg_bca47"    : "AR-47 Handguard",
+	"bm_wp_wpn_fps_ass_stoy_762_pg_bca47"    : "AR-47 Grip",
+	"bm_wp_wpn_fps_ass_stoy_762_st_bca47"    : "AR-47 Stock",
 	 
 	"bm_wp_wpn_fps_ass_stoy_762_m_steel_30" : "Standard 30 Round Magazine",
-	
-	"bm_wp_wpn_fps_ass_stoy_762_ba_ar6951" 	: "AR6951 Barrel",
 	
 	"bm_wp_wpn_fps_ass_stoy_762_so_pr"   	: "Project Reality Sounds"
 	
