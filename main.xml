@@ -145,7 +145,7 @@
 				<value_node value="wpn_fps_ass_stoy_762_ba_bca47"/>
 				<value_node value="wpn_fps_ass_stoy_762_lr_bca47"/>
 				<value_node value="wpn_fps_ass_stoy_762_ur_bca47"/>
-				<value_node value="wpn_fps_ass_stoy_762_ro_bca47"/>
+			<!--<value_node value="wpn_fps_ass_stoy_762_ro_bca47"/>-->
 				<value_node value="wpn_fps_ass_stoy_762_gb_bca47"/>
 				<value_node value="wpn_fps_ass_stoy_762_bo_bca47"/>
 				
@@ -251,6 +251,9 @@
 		
 		<texture         path="units/mods/weapons/wpn_fps_ass_stoy_762_bca47_pts/bca47_furniture_df"/>
 		<texture         path="units/mods/weapons/wpn_fps_ass_stoy_762_bca47_pts/bca47_furniture_nm"/>
+		
+		<texture         path="units/mods/weapons/wpn_fps_ass_stoy_762_bca47_pts/bca47_grip_df"/>
+		<texture         path="units/mods/weapons/wpn_fps_ass_stoy_762_bca47_pts/bca47_grip_nm"/>
 		
 		<cooked_physics  path="units/mods/weapons/wpn_fps_ass_stoy_762_bca47_pts/wpn_fps_ass_stoy_762_ba_bca47"/>
 		<model           path="units/mods/weapons/wpn_fps_ass_stoy_762_bca47_pts/wpn_fps_ass_stoy_762_ba_bca47"/>
